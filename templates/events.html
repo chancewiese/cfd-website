@@ -1,0 +1,134 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!-- about -->
+
+
+
+<html lang="en-US">
+	<head>
+		<title>Events | South Weber CFD</title>
+		<link rel="stylesheet" href="../static/styles.css">
+		<link rel="icon" type="image/x-icon" href="../images/logo-header.png">
+        <style>
+            .events-box {
+                display: flex;             /* Use flexbox for the container */
+                flex-direction: column;    /* Arrange date and columns vertically */
+                align-items: center;       /* Center the items horizontally */
+                text-align: center;
+            }
+    
+            .events-box-column {
+                background-color: #f6f5ee;
+                margin: 15px;
+                padding-bottom: 20px;
+                width: 470px;
+                height: 600px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                text-align: center;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+                border-radius: 10px; /* Aadd rounded corners */
+            }
+    
+            .events-box-column img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 10px 10px 0 0;
+            }
+    
+            .events-box-column .content {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            .events-box-column button {
+                padding: 10px 20px;
+                background-color: rgb(23,60,118);
+                color: white;
+                border: none;
+                cursor: pointer;
+                font-size: 16px;
+                border-radius: 5px;
+            }
+    
+            .events-box-column button:hover {
+                background-color: rgb(52, 106, 193);
+            }
+    
+            .events-box-date {
+                font-size: 24px;
+                margin-bottom: 20px;
+                margin-top: 20px;
+            }
+    
+            .columns-container {
+                display: flex;             /* Use flexbox for the container */
+                justify-content: center;   /* Center the items horizontally */
+                align-items: center;       /* Center the items vertically */
+            }
+        </style>
+	</head>
+<body>
+
+	<!-- Header -->
+	<header>
+		<img src="../images/logo-white.png" alt="logo" width="80" height="80">
+		<h1>South Weber Country Fair Days</h1>
+		<nav class="navbar">
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="events.html">Events</a></li>
+				<!-- Add more menu items as needed -->
+			</ul>
+		</nav>
+	</header>
+
+	<div class="banner">
+		<div class="banner-text">
+			<h1>Events</h1>
+		</div>
+	</div>
+
+
+    <main>
+		<h3>This is the Events page</h3>
+		<p>
+			Here below are the events.
+		</p>
+	</main>
+
+    <div class="events-box">
+        <div class="events-box-date">Saturday, August 3rd, 2024</div>
+        <div class="columns-container">
+            <div class="events-box-column">
+                <img src="../images/events-pickleball.jpg" alt="Pickleball Image">
+                <div class="content">
+                    <h2>Pickleball Tournament</h2>
+                    <p>This is a description for event 1.</p>
+                </div>
+                <button onclick="location.href='event.html'">Go to Event</button>
+            </div>
+            <div class="events-box-column">
+                <img src="image2.jpg" alt="Image 2">
+                <div class="content">
+                    <h2>Event Title 2</h2>
+                    <p>This is a description for event 2.</p>
+                </div>
+                <button onclick="location.href='event.html'">Go to Event</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
