@@ -30,6 +30,16 @@ header {
     padding: 10px 20px; 
 }
 
+.no-underline-link {
+    color: black;
+    text-decoration: none;
+}
+
+.no-underline-link:hover {
+    text-decoration: underline;
+}
+
+
 .navbar{
     background-color: rgb(23,60,118);
     padding-right: 50px;

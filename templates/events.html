@@ -4,7 +4,7 @@
 
 
 <!DOCTYPE html>
-<!-- about -->
+<!-- events -->
 
 
 
@@ -15,31 +15,38 @@
 		<link rel="icon" type="image/x-icon" href="../images/logo-header.png">
         <style>
             .events-box {
-                display: flex;             /* Use flexbox for the container */
-                flex-direction: column;    /* Arrange date and columns vertically */
-                align-items: center;       /* Center the items horizontally */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 text-align: center;
             }
     
             .events-box-column {
                 background-color: #f6f5ee;
-                margin: 15px;
-                padding-bottom: 20px;
+                margin: 0px 15px 15px 15px;
                 width: 470px;
-                height: 600px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: center;
                 text-align: center;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
-                border-radius: 10px; /* Aadd rounded corners */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                border-radius: 10px;
+                overflow: hidden;
+                padding-bottom: 20px;
             }
     
-            .events-box-column img {
-                max-width: 100%;
-                height: auto;
+            .events-box-column .image-container {
+                width: 100%;
+                height: 300px; /* Set the desired height for the images */
+                overflow: hidden;
                 border-radius: 10px 10px 0 0;
+            }
+    
+            .events-box-column .image-container img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
     
             .events-box-column .content {
@@ -48,6 +55,14 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                width: 100%;
+            }
+    
+            .events-box-column .button-container {
+                padding: 20px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
             }
     
             .events-box-column button {
@@ -66,14 +81,13 @@
     
             .events-box-date {
                 font-size: 24px;
-                margin-bottom: 20px;
-                margin-top: 20px;
+                margin: 30px 0px;
             }
     
-            .columns-container {
-                display: flex;             /* Use flexbox for the container */
-                justify-content: center;   /* Center the items horizontally */
-                align-items: center;       /* Center the items vertically */
+            .events-columns-container {
+                display: flex;
+                justify-content: center;
+                align-items: stretch; /* Ensure all columns are the same height */
             }
         </style>
 	</head>
@@ -103,32 +117,79 @@
 
     <main>
 		<h3>This is the Events page</h3>
-		<p>
-			Here below are the events.
-		</p>
+		<p>Here below are the events.</p>
 	</main>
 
     <div class="events-box">
-        <div class="events-box-date">Saturday, August 3rd, 2024</div>
-        <div class="columns-container">
+        <div class="events-box-date">Saturday, August 3<sup>rd</sup>, 2024</div>
+        <div class="events-columns-container">
             <div class="events-box-column">
-                <img src="../images/events-pickleball.jpg" alt="Pickleball Image">
+                <div class="image-container">
+                    <img src="../images/pickleball-tournament.jpg" alt="Pickleball Image">
+                </div>
                 <div class="content">
                     <h2>Pickleball Tournament</h2>
-                    <p>This is a description for event 1.</p>
+                    <p><b>Registration Dates</b><br>dates</p>
+                    <p><b>Event Dates</b><br>dates</p>
+                    <p><b>Location</b><br> <a id="pickleball-courts" href="#" target="_blank" class="no-underline-link">South Weber Pickleball Courts</a></p>
                 </div>
-                <button onclick="location.href='event.html'">Go to Event</button>
+                <div class="button-container">
+                    <button onclick="location.href='event.html'">Go to Event</button>
+                </div>
             </div>
             <div class="events-box-column">
-                <img src="image2.jpg" alt="Image 2">
-                <div class="content">
-                    <h2>Event Title 2</h2>
-                    <p>This is a description for event 2.</p>
+                <div class="image-container">
+                    <img src="../images/golf-tournament.jpg" alt="Golf Image">
                 </div>
-                <button onclick="location.href='event.html'">Go to Event</button>
+                <div class="content">
+                    <h2>Golf Tournament</h2>
+                    <p><b>Registration Dates</b><br>dates</p>
+                    <p><b>Event Dates</b><br>dates</p>
+                    <p><b>Location</b><br> location</p>
+                </div>
+                <div class="button-container">
+                    <button onclick="location.href='event.html'">Go to Event</button>
+                </div>
+            </div>
+        </div>
+        <div class="events-box-date">Monday, August 5<sup>th</sup>, 2024</div>
+        <div class="events-columns-container">
+            <div class="events-box-column">
+                <div class="image-container">
+                    <img src="../images/dinner-in-the-park.jpg" alt="Dinner Image">
+                </div>
+                <div class="content">
+                    <h2>Dinner In The Park</h2>
+                    <p><b>Registration Dates</b><br>dates</p>
+                    <p><b>Event Dates</b><br>dates</p>
+                    <p><b>Location</b><br> <a id="central-park" href="#" target="_blank" class="no-underline-link">South Weber Central Park</a></p>
+                </div>
+                <div class="button-container">
+                    <button onclick="location.href='event.html'">Go to Event</button>
+                </div>
+            </div>
+            <div class="events-box-column">
+                <div class="image-container">
+                    <img src="image4.jpg" alt="Game Show Image">
+                </div>
+                <div class="content">
+                    <h2>Game Show</h2>
+                    <p><b>Registration Dates</b><br>dates</p>
+                    <p><b>Event Dates</b><br>dates</p>
+                    <p><b>Location</b><br> <a id="central-park" href="#" target="_blank" class="no-underline-link">South Weber Central Park</a></p>
+                </div>
+                <div class="button-container">
+                    <button onclick="location.href='event.html'">Go to Event</button>
+                </div>
             </div>
         </div>
     </div>
+
+    <script src="../scripts/variables.js"></script>
+    <script>
+        document.getElementById('central-park').href = centralParkUrl;
+        document.getElementById('pickleball-courts').href = pickleballCourtsUrl;
+    </script>
 
 </body>
 </html>
