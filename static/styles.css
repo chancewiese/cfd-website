@@ -3,17 +3,22 @@
 html{
     background-color: #f1f1f1;
     font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
 }
 
 
 body{
     margin: 0px;
     padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 
 main{
     padding: 10px 35px;
     background-color: red;
+    flex: 1;
 }
 
 header {
