@@ -49,17 +49,17 @@
 		</p>
 	</main>
 
-	<div id="footer"></div>
-
-    <!-- Footer script -->
-    <script>
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading footer:', error));
-    </script>
+	<footer class="footer">
+		<nav class="footer-nav">
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="contact-us.html">Contact Us</a></li>
+				<li><a href="events.html">Events</a></li>
+			</ul>
+		</nav>
+		<p>© 2024 South Weber Country Fair Days. All rights reserved.</p>
+	</footer>
 
 </body>
 </html>

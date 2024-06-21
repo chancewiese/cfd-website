@@ -173,7 +173,7 @@
                     <img src="image4.jpg" alt="Game Show Image">
                 </div>
                 <div class="content">
-                    <h2>Game Show</h2>
+                    <h2>Let Us Make A Deal</h2>
                     <p><b>Registration Dates</b><br>dates</p>
                     <p><b>Event Dates</b><br>dates</p>
                     <p><b>Location</b><br> <a id="central-park" href="#" target="_blank" class="no-underline-link">South Weber Central Park</a></p>
@@ -185,23 +185,36 @@
         </div>
     </div>
 
-    <div id="footer"></div>
-
-    <!-- Footer script -->
-    <script>
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading footer:', error));
-    </script>
+    <footer class="footer">
+		<nav class="footer-nav">
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="contact-us.html">Contact Us</a></li>
+				<li><a href="events.html">Events</a></li>
+			</ul>
+		</nav>
+		<p>© 2024 South Weber Country Fair Days. All rights reserved.</p>
+	</footer>
 
     <script src="../scripts/variables.js"></script>
     <script>
         document.getElementById('central-park').href = centralParkUrl;
         document.getElementById('pickleball-courts').href = pickleballCourtsUrl;
     </script>
+
+<script src="../scripts/variables.js"></script>
+<script>
+    // Iterate over events to find and set URLs
+    events.events.forEach(event => {
+        let locationName = event.location.name.toLowerCase().replace(/ /g, '-');
+        if (locationName === 'South Weber Pickleball Courts') {
+            document.getElementById('pickleball-courts').href = event.location.url;
+        } else if (locationName === 'South Weber Central Park') {
+            document.getElementById('central-park').href = event.location.url;
+        }
+    });
+</script>
 
 </body>
 </html>
